@@ -2,7 +2,7 @@
 #sudo fuser -k 5432/tcp 
 #sudo docker start postgres96
 
-if [ ! "$(docker version --format '{{.Server.Version}}')" ]; then
+if [ ! "$(sudo docker version --format '{{.Server.Version}}')" ]; then
 	echo "Docker not install"
 	sudo apt-get update
 	sudo apt-get install docker-ce -y || sudo apt-get install docker.io
